@@ -8,6 +8,18 @@ moon.onclick = function() {
     }
 };
 
+document.addEventListener('DOMContentLoaded', function() {
+    const faqQuestions = document.querySelectorAll('.faq-question');
+  
+    faqQuestions.forEach(function(question) {
+      question.addEventListener('click', function() {
+        // Toggle active class on the clicked question
+        this.classList.toggle('active');
+      });
+    });
+});
+  
+
 document.getElementsByClassName('form-info')[0].addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent form submission
   
@@ -26,3 +38,4 @@ document.getElementsByClassName('form-info')[0].addEventListener('submit', funct
       window.location.href = "contact2.html";
     }); 
 });
+

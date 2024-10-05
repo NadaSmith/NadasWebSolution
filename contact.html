@@ -1,42 +1,59 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-H4FD50S00R"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-H4FD50S00R"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-  gtag('config', 'G-H4FD50S00R');
-</script>
+        gtag('config', 'G-H4FD50S00R');
+        </script>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=1000, user-scalable=0">
-        <title>Contact Page</title>
+        <meta name="p:domain_verify" content="ee6491cd639589159ccef832c777e937"/>
+        <meta name='impact-site-verification' value='b959dd10-ce6d-4262-8fc2-a2ea185bd486' />
+        <meta name="title" content="Contact Us | Nada's Web Solutions - Get in Touch for Web Development">
+        <meta name="description" content="Reach out to Nada's Web Solutions for your web development needs. Fill out our contact form or book a free consultation today. We're here to help you achieve your digital goals!">
+        <meta name="keyword" content="contact, web development, consultation, Nada's Web Solutions, get in touch, digital goals, email, inquiries">
+        <title>Contact Page | Nada's Web Solutions</title>
+        <link rel="icon" href="personal_logo.ico" type="image/x-icon">
         <link rel="stylesheet" href="">
         <link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset.css"> <!-- link to stylesheet that removes browser default styling-->
         <link rel="stylesheet" href="stylesheet.css">
         <script src="https://kit.fontawesome.com/10e9e3ac9a.js" crossorigin="anonymous"></script>
         
+        <!-- Calendly badge widget begin -->
+        <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+        <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+        <script type="text/javascript">window.onload = function() { Calendly.initBadgeWidget({ url: 'https://calendly.com/ayronadas/30min', text: 'Schedule time with me', color: '#f0ecea', textColor: '#cfb4a4', branding: true }); }</script>
+        <!-- Calendly badge widget end -->
+        
+        <script>
+            function openCalendlyPopup() {
+                Calendly.initPopupWidget({url:'https://calendly.com/ayronadas/30min'});
+                return false;
+            }
+        </script>
     </head>
     <body>
+          
         <div id="container" class="fixed-width">
             <!--HEADER SECTION-->
             <header class="header-page">
                 <div class="fixed-width clearfix">
-                    <em class="site-name">A. Smith</em>
+                    <a href="index.html"<em class="site-name">A. Smith</em></a>
                     <nav class="moon">
                         <ul>
-                            <li><a href="index.html">homepage<em>home</em></a></li>
-                            <li><a href="about.html">who I am?<em>about</em></a></li>
                             <li><a href="projects.html">MY PORTFOLIO<em>projects</em></a></li>
-                            <li><a href="https://medium.com/@ayronada">articles<em>blog</em></a></li>
-                            <li><a href="socials.html">Follow me<em>Socials</em></a></li>
-                            <li><a href="#">get in touch<em>contact</em></a></li>
+                            <li><a href="nadaswebsolutions.html"> Nada's Web <em>Solutions</em></a></li>
+                            <li><a href="freeresources.html">complimentary<em>Resources</em></a></li>
+                            <li><a href="blog.html">articles<em>blog</em></a></li>
+                            <li><a href="#.html">get in touch<em>contact</em></a></li>
                         </ul>
                         <img id="moon" src="moon.png" alt="">
+                        
                     </nav>
                 </div>
             </header>
@@ -45,17 +62,53 @@
                 <img class="top-image" src="nada6.png" alt="Ayronada's headshot with big, bright smile and curly hair">
             </section>
 
-            <br>
-            <br>
 
             
-            <div>
-                <h1 id="contact-title">CONTACT ME!</h1>
+            <div class="two-part">
+                <h1 id="contact-title">Contact Us</h1>
+                <p class="bigger">
+                    Thank you for considering Nada's Web Solutions. We're here to assist you with any inquiries, collaborations, 
+                    or project ideas you may have. Please feel free to reach out to us using the contact form provided below, and 
+                    we'll get back to you as soon as possible. We look forward to hearing from you and helping you achieve your 
+                    digital goals.
+                </p>
+            </div>        
+            
+           
+
+            <div class="cta">
+
+                <h2 class="form-title">Book Now</h2>
+    
+                <div class="book-now">
+                    <h1 class="book-now-title-space">
+                        🗓️ Ready to Elevate Your Online Presence?
+                    </h1>
+    
+                    <p>
+                        Book your free consultation today and take the first step towards enhancing your online presence with 
+                        our expert web development and design services! Simply schedule a convenient time to discuss your project 
+                        with our team. We're here to help you achieve your goals and unlock new opportunities for success. Let's 
+                        collaborate and bring your vision to life!
+                    </p>
+        
+                    <button id="btn" type="submit" onclick="openCalendlyPopup()">BOOK A CONSULT!</button>
+                    
+                </div>
+    
             </div>
+            <br>
+            
+            <hr>
+
             
             <div class="contact-page">
 
+
                 <div class="form">
+
+                    <h2 class="form-title">Still Have Questions?</h2>
+
                     <form class="form-info"  method="POST">
 
                         <label for="name"></label>
@@ -72,42 +125,53 @@
                     </form>
     
                 </div>
+            
+            </div>  
 
-                <br>
+            <br>
+            <br>
+        
 
-                <div class="map">
-                    <div style="width:500px;height:500px;">
-                        <div id="my-map-canvas" style="height:100%; width:100%;max-width:100%;">
-                            <iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=Arlington,+VA,+USA&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe>
+             <!--FOOTER SECTION-->
+             
+            <footer class="footer-page-content">
+                
+                
+                <div class="footer_left">
+                    <div>
+                        <div class="footer-logo">
+                            <a href="index.html">
+                                <img src="personal_logo.ico" alt="Logo">
+                            </a>
                         </div>
-                        <a class="google-maps-html" href="https://kbj9qpmy.com/hrn" id="enable-map-data">Hosting Right Now</a><style>#my-map-canvas img{max-width:none!important;background:none!important;font-size: inherit;font-weight:inherit;}</style></div>
                     </div>
-
+                    <small class="copyright">&copy; 2024 - <b>Nada's Web Solutions</b>. All Rights Reserved</small>
                 </div>
-            
-            </div>
-            
-
-            <!--FOOTER SECTION-->
-            <footer class="footer-page-contact">
-                <div class="footer-page-content fixed-width clearfixed">
-                    <small class="copyright">All Content Copyright 2023 - Nada Smith. All Rights Reserved</small>
-                    <small class="credits">Site Designed by <a href="#">Nada Smith</a></small>
+                <div class="footer_right">
+                
+                   <div class="footer-nav-container">
+                        <ul class="footer-nav">             
+                            <li><a href="projects.html">MY PORTFOLIO<em>projects</em></a></li>
+                            <li><a href="nadaswebsolutions.html"> Nada's Web <em>Solutions</em></a></li>
+                            <li><a href="freeresources.html">complimentary<em>Resources</em></a></li>
+                            
+                        </ul>
+                        <ul class="footer-nav">
+                            <li><a href="blog.html">articles<em>blog</em></a></li>
+                            <li><a href="contact.html">get in touch<em>contact</em></a></li>
+                        </ul>
+                   </div>
+                
+                    <small class="credits">Site Designed by <a href="index.html">Ayronada Smith</a></small>
                 </div>
+
             </footer>
     
 
-
+            
 
             <script defer src="app3.js" charset="utf-8"></script>
 
-            <script type="text/javascript"src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-            
-            <script type="text/javascript">
-                (function(){
-                    emailjs.init("IuR2CDePJXEZa3ZDb");
-                })();
-            </script>
     
 
         </div>

@@ -1,30 +1,74 @@
 body, *, *::before, *::after {     /*understand why we put this at the top*/
     box-sizing: border-box;
+    
+}
+
+:root{
+    --primary-color: white;
+    --secondary-color: black;
+}
+
+html {
+    position: relative;
 }
 
 html, body {
     font-family: Helvetica, sans-serif;
-    font-size: 12px;
+    font-size: 10px;
     color:#474747;
+    height: 100%;
 }
 
 body {
     background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
     min-height: 100vh;
 }
 
+.content {
+    flex: 1;
+}
 
 .fixed-width {
     width: 940px;
-    margin: 0 auto 0 auto;  /*centers the div when a block level element; centered bc left and right will automatically be caluclated by browswer to be centered*/
+    max-width: 94%;
+    margin: 0 auto ;  /*centers the div when a block level element; centered bc left and right will automatically be caluclated by browswer to be centered*/
 }
 
-h1,h2,h3,h4,h5,h6, .title  {
-    font-family: economica, sans-serif;
-    text-transform: uppercase;
+h1,h2,h3,h4,h5,h6, .title {
+    font-family:  sans-serif;
     font-weight: bold;
-    margin: 0 0 1em;
+    margin: 0 0 0.5em;
     color: var(--secondary-color);
+}
+
+
+
+p {
+    font-size: 17px;
+    font-family: Helvetica, sans-serif;
+}
+
+.business-page-title {
+    font-family:  sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1.5em;
+    color: var(--secondary-color);
+}
+
+.icon a {
+    background-color: var(--primary-color);
+}
+
+.icon {
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: row;
+    border-radius: px;
+    padding-right: 1em;
 }
 
 .sr-only{
@@ -39,8 +83,21 @@ p {
     color: var(--secondary-color);
 }
 
+.bigger {
+    font-size: 18px;
+    text-align: justify;
+}
+
+
+
+.prof-text p {
+    font-size: 18px;
+}
+
 .icon {
     color: var(--secondary-color);
+    font-size: 18px;
+    text-align:center;
 }
 
 h2 {
@@ -77,16 +134,21 @@ p {
     clear:both;
 }
 
+
+.clearfix .service-title {
+    margin-top: 0.5em;
+}
+
+.clearfix a {
+    margin-bottom: 0.4em;
+}
+
 /*=========================================
     Header
 ==========================================*/
 .top-image {
     box-shadow: 5px 7px 25px rgba(0, 0, 0, 0.5);
 }
-
-.header-page {
-       padding-bottom: 2em;
-    }
 
 
     .header-page h1 {
@@ -106,7 +168,9 @@ p {
         position: absolute;   
         bottom: 0;
         color: var(--secondary-color);
-    }    
+    } 
+
+    
 
     .header-page nav {
         float: right;
@@ -117,7 +181,7 @@ p {
     .header-page nav li {
         color: #bfbfbf;
         float: left;
-        margin-right: 3rem;
+        margin-right: 2rem;
         padding-top: 3rem;
     }
 
@@ -136,7 +200,7 @@ p {
         cursor: pointer;
     }
     
-    #moon {
+    #moon, .footer-nav {
         width: 50px;
         height: 50px;
         cursor: pointer;
@@ -147,10 +211,7 @@ p {
         display: flex;
     }
 
-    :root{
-        --primary-color: white;
-        --secondary-color: black;
-    }
+   
     .dark-theme {
         --primary-color: black;
         --secondary-color: white;
@@ -170,12 +231,9 @@ p {
         padding: 0.5em 1em;
     }
 
-    .main-visual figcaption > strong {
-        font-size: 1.4em;
-    }
-
     figcaption {
-        padding-top: 3em;
+        
+        margin-top: 3em;
     }
 /*========================================
     About-Section
@@ -194,7 +252,7 @@ img {
         float: left;
         width: 30%;
         margin-right: 5%;
-        margin-bottom: 5%;  
+        margin-bottom: 0%;  
 }
 
     .claim1:last-child {
@@ -212,9 +270,14 @@ img {
     .claim1 header > h2 {
         float: left;
         width: 75%;
-        padding-left: 20%;
-        font-size: 20.px;
+        font-size: 18.5px;
     }
+
+    article.claim1 p:last-of-type {
+        text-align: justify;
+        font-size: 18px;
+    }
+    
 
 .para-2 {
     margin-top: 2em;
@@ -242,11 +305,17 @@ img {
 .about-me-image {
     width: 278px;
     box-shadow: 5px 7px 25px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.about-me-image1 {
+    transition: transform 0.2s ease;
 }
 
 .about-me-image:hover {
     transform: scale(2.5);
 }
+
     .claim2:last-child {
         margin-right: 0%;
     }
@@ -262,8 +331,11 @@ img {
     .claim2 header > h2 {
         float: left;
         width: 75%;
-        padding-left: 35px;
-        font-size: 20.px;
+        font-size: 18.5px;
+    }
+
+    article.claim2 p:last-of-type {
+        text-align: justify;
     }
 
 .claim3 {
@@ -287,13 +359,20 @@ img {
     .claim3 header > h2 {
         float: left;
         width: 75%;
-        padding-left: 45px;
-        font-size: 20.5px;
+        font-size: 18.5px;
+    }
+
+    article.claim3 p:last-of-type {
+        text-align: justify;
     }
 
 .data-block {
-    margin-top: 5%;
+    margin-top: 4%;
     margin-bottom: 5%;
+}
+
+.data-block > p {
+    margin-bottom: 2em;
 }
 
 /*==============================
@@ -330,6 +409,21 @@ img {
     font-size: 35px;
 }
 
+.my-work-title {
+    padding-top: 1em;
+    font-size: 35px;
+    text-align: center;
+}
+
+.justify {
+    text-align: justify;
+}
+
+.title-wrapper > p {
+    text-align: justify;
+    font-size: 18px;
+}
+
 .work1 {
     float: left;
     width: 22%;
@@ -338,13 +432,17 @@ img {
 
 .work1 img {
     width: 200px;
-    height: 120px;
-  
+    height: 200px;
 }
+
 
 .work1 figure {
     margin-top: 5em;
     margin-bottom: 1em;
+}
+
+#work h2 {
+    font-size: 25px;
 }
 
 .work2 {
@@ -355,9 +453,10 @@ img {
 
 .work2 img {
     width: 200px;
-    height: 120px;
-  
+    height: 200px;
 }
+
+
 
 .work2 figure {
     margin-top: 5em;
@@ -372,7 +471,7 @@ img {
 
 .work3 img {
     width: 200px;
-    height: 120px;
+    height: 200px;
   
 }
 
@@ -389,7 +488,7 @@ img {
 
 .work4 img {
     width: 200px;
-    height: 120px;
+    height: 200px;
     width: 100%;
 }
 
@@ -406,7 +505,7 @@ img {
 
 .work5 img {
     width: 200px;
-    height: 120px;
+    height: 200px;
   
 }
 
@@ -423,7 +522,7 @@ img {
 
 .work6 img {
     width: 200px;
-    height: 120px;
+    height: 200px;
   
 }
 
@@ -440,7 +539,7 @@ img {
 
 .work7 img {
     width: 200px;
-    height: 120px;
+    height: 200px;
   
 }
 
@@ -457,7 +556,7 @@ img {
 
 .work8 img {
     width: 200px;
-    height: 120px;
+    height: 200px;
     width: 100%;
 }
 
@@ -465,49 +564,116 @@ img {
     margin-top: 5em;
     margin-bottom: 1em;
 }
+
+.work9 {
+    float: left;
+    width: 22%;
+    margin-right: 0;
+}
+
+.work9 img {
+    width: 200px;
+    height: 200px;
+    width: 100%;
+}
+
+.work9 figure {
+    margin-top: 5em;
+    margin-bottom: 1em;
+}
+
+.work10 {
+    float: left;
+    width: 22%;
+    margin-right: 0;
+}
+
+.work10 img {
+    width: 200px;
+    height: 200px;
+    width: 100%;
+}
+
+.work10 figure {
+    margin-top: 5em;
+    margin-bottom: 1em;
+}
+
+.work11 {
+    float: left;
+    width: 22%;
+    margin-right: 0;
+}
+
+.work11 img {
+    width: 200px;
+    height: 200px;
+    width: 100%;
+}
+
+.work11 figure {
+    margin-top: 5em;
+    margin-bottom: 1em;
+}
+
+.work12 {
+    float: left;
+    width: 22%;
+    margin-right: 0;
+}
+
+.work12 img {
+    width: 200px;
+    height: 200px;
+    width: 100%;
+}
+
+.work12 figure {
+    margin-top: 5em;
+    margin-bottom: 1em;
+}
+
+#center {
+    text-align: center;
+}
 /*======================================
     Contact Form
 =======================================*/
 
 #contact-title {
     font-weight: bolder;
-    font-size: 35px;
+    font-size: 75px;
     text-align: center;
     color: var(--secondary-color);
+    padding-top: 1em;
 }
 
 .contact-page {
-    display: flex;
-    padding: 2%;
+    margin-top: 3em;
 }
 
-.map {
-    padding-left: 1%;
-}
+
 
 .form {
+    width: 940px;
     height: 2%;
     padding: 2%;
-    background-color: mistyrose;
+    background-color: #F0ECEA;
     box-shadow: 5px 7px 25px rgba(0, 0, 0, 0.5);
 }
 
-.form:hover {
-    transform: scale(1.2);
-}
+
 
 .form-info {
-    background-color: mistyrose;
+    background-color: #F0ECEA;
 }
 
 .form-thank-you {
-    display:;
     margin-top: 2%;
     height: 2%;
     padding: 2%;
-    background-color: mistyrose;
+    background-color: #F0ECEA;
     box-shadow: 5px 7px 25px rgba(0, 0, 0, 0.5);
-    border: solid;
 }
 
 .form-thank-you h1 {
@@ -586,166 +752,172 @@ button:active {
     Footer
 =============================*/
 
-.footer-page::before {   /*use pseudoclass to create space on page w/o adding markup to index page*/
-    content: " ";
+/*=============================
+    Footer
+=============================*/
+
+
+.footer-page-content{
+    background-image: url(Business_banner.png);
+    background-size: 940px auto;
+    background-position: center center;
+    background-repeat: none;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    height: 200px;
+    margin-top: 2em;
+    width: 940px;
+}
+
+
+/* .footer-contactpage-content{
+    background-image: url(Business_banner.png);
+    background-repeat: 100% auto;
+    background-position: center;
+    display: flex;
+    flex-direction: row;
+    border: black solid;
+    width: 940px;
+} */
+
+.credits {
+    margin-right: 5em;
+}
+
+.footer_left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 0.5em;
+}
+
+.copyright {
+    margin-left: 2em;
+}
+
+.footer-logo img {
+    height: 100px;
+    width: 100px;
+    margin-top: 4em;
+    margin-left: 10em;
+}
+
+.footer_right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 0.5em;
+}
+
+.footer-nav-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-right: 2em;
+}
+
+.footer-nav {
+    font-family: Economica, sans-serif;
+    text-transform: uppercase; 
+    margin-right: 7em;
+}
+
+.footer-nav li {
+    color: #bfbfbf;
+    margin-bottom: 3em;
+    width: 200px;
     display: block;
-    height: 5px;
 }
 
-
-
-.footer-page-index {
-    color: #9b9b9b ;
-    margin-top: 20vh;
+.footer_right li em {
+    display: block;         /*making em a block level element it will push it down to the next line*/
+    color: var(--secondary-color);
+    font-size: 1.5em;
 }
 
-    .footer-page-index .copyright {
-        float: left;
-    }
-    
-    .footer-page-index .socials {
-        padding-left: 10%;
-    }
-
-    .footer-page-index .credits {
-        float: right;
-    }
-
-.footer-page-about {
-    color: #9b9b9b ;
-    margin-top: 53vh;
-}
-    .footer-page-about .copyright {
-        float: left;
-    }
-    
-    .footer-page-about .socials {
-        padding-left: 10%;
-    }
-
-    .footer-page-about .credits {
-        float: right;
-    }
-
-.footer-page-projects {
-    color: #9b9b9b ;
-    margin-top: 50vh;
-}
-    .footer-page-projects .copyright {
-        float: left;
-    }
-    
-    .footer-page-projects .socials {
-        padding-left: 10%;
-    }
-
-    .footer-page-projects .credits {
-        float: right;
-    }
-
-.footer-page-socials {
-    color: #9b9b9b ;
-    margin-top: 50vh;
-}
-    .footer-page-socials .copyright {
-        float: left;
-    }
-    
-    .footer-page-socials .socials {
-        padding-left: 10%;
-    }
-
-    .footer-page-socials .credits {
-        float: right;
-    }
-
-.footer-page-contact {
-    color: #9b9b9b ;
-    margin-top: 52vh;
-}
-    .footer-page-contact .copyright {
-        float: left;
-    }
-    
-    .footer-page-contact .socials {
-        padding-left: 10%;
-    }
-
-    .footer-page-contact .credits {
-        float: right;
-    }
-
-    .footer-page-contact-copy {
-        color: #9b9b9b ;
-        margin-top: 73vh;
-    }
-        .footer-page-contact-copy .copyright {
-            float: left;
-        }
-        
-        .footer-page-contact-copy .socials {
-            padding-left: 10%;
-        }
-    
-        .footer-page-contact-copy .credits {
-            float: right;
-        }
-
-@media (max-width:950px ) {
-    .footer-page-index, .footer-page-about, .footer-page-projects, .footer-page-socials, .footer-page-contact {
-        color: #9b9b9b ;
-        font-size: 1rem;
-        height: px;
-        margin-top: auto;
-        position: fixed;
-        bottom: 0;
-    }
+.footer-contactpage-content {
+    background-image: url(Business_banner.png);
+    background-repeat: no-repeat; 
+    background-size: 940px auto; 
+    background-position: center;
+    display: flex;
+    justify-content: space-between; /* Align content horizontally */
+    align-items: center; /* Align content vertically */
+    padding: 10px; /* Add padding for spacing */
+    width: 940px; /* Allow the footer to span the full width of the viewport */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    margin: auto;
+    margin-bottom: 1em;
+    height: 200px;
 }
 
-
-
-
-#container {
-    background-color: var(--primary-color);
+.contact-credits {
+    margin-right: em;
+    margin-bottom: 3em;
 }
 
-
-
-    /*position: fixed;  /*=================================================*/
-    /*bottom: 0;        /* this makes the footer stay at the bottom of page*/
-    /*width: 100%;      /*=================================================
-    }*/
-
-    .footer-page .copyright {
-        float: left;
-    }
-    
-    .footer-page .socials {
-        padding-left: 10%;
-    }
-
-    .footer-page .credits {
-        float: right;
-    }
-
-.footer-page-content {
-    padding: 2em 0;
+.contact_footer_left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 0.5em;
 }
 
+.contact-copyright {
+    margin-left: 2em;
+    margin-bottom: 3em;
+}
 
+.contact-footer-logo img {
+    height: 100px;
+    width: 100px;
+    margin-left: 10em;
+}
 
+.contact_footer_right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 0.5em;
+}
+
+.contact-footer-nav-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-left: 2em;
+    margin-bottom: 14em;
+}
+
+.contact-footer-nav {
+    font-family: Economica, sans-serif;
+    text-transform: uppercase; 
+    margin-right: 7em;
+}
+
+.contact-footer-nav li {
+    color: #bfbfbf;
+    margin-bottom: 3em;
+    width: 200px;
+    display: block;
+}
+
+.contact_footer_right li em {
+    display: block;         /*making em a block level element it will push it down to the next line*/
+    color: var(--secondary-color);
+    font-size: 1.5em;
+}
 /*====================================================
     Resume Page - body section
 ====================================================*/
 
-.socials-page {
-    width: 100%;
-    height: 585px;
+/* .socials-page {
     display: flex;
     padding-top: 8em;
     padding-left: 5em;
     box-shadow: 5px 7px 25px rgba(1, 0, 0, 1);
-}
+} */
 
 .socials-page-title {
     text-align: center;
@@ -772,16 +944,22 @@ button:active {
 }
 
 .social-links {
-    width: 320px;
     margin-top: 2em;
-    padding-left: 15em;
 }
 
-.social-links p {
-    text-align: center;
-    padding: 0.5em;
+.social-links a {
+    margin: 1.4em;
+    font-size: x-large;
 }
 
+hr {
+    border: solid black 1px;
+    width: 940px;
+}
+
+.social-links-hr {
+    margin-top: 3.5em;
+}
 
 .me {
     width: 300px ;
@@ -799,9 +977,8 @@ button:active {
 
 .prof-pic {
     width: 350px;
-    height: 350px;
+    height: 325px;
     margin-top: 4em;
-    margin-left: 2em;
 }
 
 .prof-pic:hover {
@@ -812,34 +989,348 @@ button:active {
     padding-top: 20px;
     padding-left: 2em;
     margin-top: 1.5em;
+    text-align: justify;
+}
+
+.prof-text2 {
+    text-align: justify;
 }
 
 .About-page-title {
-    font-size: 35px;
+    font-size: 80px;
     text-align: center;
-    margin-top: 35px;
 }
 
 .figure-about {
     display: flex;
     width: 940px;
-    height: 500px;
+    flex-direction: column;
+    text-align: justify;
+    font-size: 18px;
 }
 
-figcaption strong {
+
+.figure-about1 p{
+    text-align: justify;
+    font-size: 18px;
+    margin-left: 2em;
+}
+
+.portion {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.figure-about2 {
+    display: flex;
+    width: 960px;
+    height: 260px;
+}
+
+.figure-about2 p {
+    text-align: justify;
+    font-size: 18px;
+}
+
+.figure-about + p {
+    margin-top: 0em;
+}
+
+figcaption h1 {
     color: var(--secondary-color);
     font-size: xx-large;
 }
 
 .icon i:hover {
-    color: darkgoldenrod;
-    transform: rotate(360deg);   
+    color: darkgoldenrod; 
 }
 
 .icon a:hover {
     color: darkgoldenrod;   
 }
 
+.service-title {
+    font-size: 35px;
+    text-decoration: underline;
+    text-align: center;
+    margin-bottom: 1.8em;
+}
+
+.service-title-sub {
+    text-align: center;
+    font-weight: 800;
+}
+
+.this-text {
+    border: black solid;
+    height: 500px;
+}
+
+.figure-about {
+    margin-top: 1em;
+}
+
+.figure-about p {
+    font-size: 18px;
+}
+
+/*====================================================
+    Blog popup
+====================================================*/
+
+.process-title {
+    text-align: center;
+    font-size: 25px;
+}
+
+b {
+    font-weight: 900;
+}
+
+#error-page {
+    display: flex;
+    flex-direction: row;
+}
+
+/*==========================================================
+    FAQs page
+===========================================================*/
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .faq-item {
+    margin-bottom: 10px;
+  }
+  .faq-question {
+    cursor: pointer;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 550;
+    border-radius: 10px;
+  }
+  .faq-answer {
+    display: none;
+    padding: 30px;
+    font-size: 22px;
+    margin-left: 20px;
+    line-height: 1.5;
+    color: var(--secondary-color);
+    text-align: justify;
+  }
+  .faq-question.active + .faq-answer {
+    display: block;
+  }
+
+  b {
+    cursor: pointer;
+  }
+
+  .faq-icon i {
+    padding-right: 10px;
+    margin-right: 0.5em;
+  }
+
+  .faq-icon {
+    display: flex;
+    list-style-type: none;
+    align-items: flex-start;
+  }
+
+  .faq-icon .faq-icon-design {
+    text-indent: 0.2em;
+  }
+
+  .faq-icon .faq-icon-test {
+    text-indent: 0.3em;
+  }
+
+  /* Define styles for the map container */
+.map {
+    width: 100%; /* Adjust width as needed */
+    height: 100%; /* Adjust height as needed */
+    max-width: 100%; /* Ensure responsiveness */
+}
+
+/* Define styles for the map iframe */
+.map-iframe {
+    width: 100%;
+    height: 500px;
+    border: 0;
+}
+
+.clearfix-p {
+    text-align: justify;
+    font-size: 18px;
+}
+
+.clearfix > strong {
+    font-size: 50px;
+    margin-top: 2em;
+}
+
+.index-pic p{
+    text-align: justify;
+}
+
+.other-projects p {
+    text-align: justify;
+    font-size: 18px;
+}
+
+.about-form {
+    margin-top: 2em;
+    margin-bottom: 3em;
+}
+
+.form-title {
+    font-size: 40px;
+    text-align: center;
+}
+
+
+  
+
+
+.book-now-title-space {
+    font-size: 25px;
+}
+
+.cta {
+    background-color: #F0ECEA;
+    width: 940px;
+    height: 400px;
+    margin: 3em auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    box-shadow: 5px 7px 25px rgba(0, 0, 0, 0.5);
+}
+
+.cta button {
+    align-items: center;
+}
+
+.book-now p{
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.book-now h1{
+    text-align: center;
+    margin-top: em;
+    margin-bottom: 1em;
+}
+
+.book-now > button {
+    margin-bottom: 3em;
+    cursor: pointer;
+    width: 300px;
+    height: 50px;
+    font-weight: 800;
+    font-size: 20px;
+}
+
+
+.about-me-section {
+    display: flex;
+    flex-direction: column;
+}
 
 
 
+.calendly-inline-widget {
+    min-width: 320px;
+    height: 1160px;
+}
+
+.calendly {
+    height: 800px;
+    margin-top: em;
+}
+
+.sent-page {
+    margin-bottom: 5em;
+}
+
+.two-part {
+    display: flex;
+    flex-direction: column;
+}
+
+.items{
+    margin-top: -5em;
+}
+
+.the-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 4em;
+}
+
+.the-title img {
+    width: 300px;
+}
+
+.section-title {
+   text-align: center;
+   font-size: 50px;
+   text-decoration: underline;
+}
+
+.section-title2 {
+    text-align: center;
+    padding-top: 5.5em;
+    font-size: 50px;
+    text-decoration: underline;
+ }
+
+.section-title1 {
+    text-align: center;
+    padding-top: 1.5em;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    font-size: 30px;
+    text-decoration: underline;
+ }
+
+ .ec-cart-widget {
+    margin-top: 2em;
+ }
+
+ .cat-search-container {
+    display: flex;
+    margin: 2em;
+ }
+
+ .my-categories {
+    width: 500px;
+    margin-left: 0;
+    margin-right: 3em;
+    border: black solid;
+ }
+
+ #my-search-101771698  {
+    width: 500px;
+    margin-right: 0;
+    margin-left: 3em;
+    border: black solid;
+ }
+
+.free-resource-title {
+    text-align: center;
+}
+
+.project-title {
+    text-align: center;
+}

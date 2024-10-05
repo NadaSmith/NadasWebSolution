@@ -1,8 +1,10 @@
-var typed = new Typed(".title",{
-    strings:["Software Engineer", "Front-End Developer", "Web Developer", "Tech Blogger"],
-    typedSpeed: 70,
-    backSpeed: 55,
-    loop: true
+document.addEventListener('DOMContentLoaded', function() {
+    var typed = new Typed(".title",{
+        strings:["Software Developer", "Front-End Developer", "Web Developer", "Tech Blogger", "Business Owner", "Entrepreneur"],
+        typedSpeed: 60,
+        backSpeed: 55,
+        loop: true
+    })
 })
 
 
@@ -15,3 +17,8 @@ moon.onclick = function() {
         moon.src = "moon.png";
     }
 }
+
+
+
+
+
